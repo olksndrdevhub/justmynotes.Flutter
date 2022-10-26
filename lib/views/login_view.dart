@@ -1,5 +1,3 @@
-import 'dart:developer' as devtools show log;
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:justmynotes/constants/routes.dart';
@@ -70,7 +68,6 @@ class _LoginViewState extends State<LoginView> {
                   notesRoute,
                   (route) => false,
                 );
-                devtools.log('User log in successfully');
               } on FirebaseAuthException catch (error) {
                 if (error.code == 'user-not-found') {
                   await showErrorDialog(
