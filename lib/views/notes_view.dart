@@ -47,7 +47,18 @@ class _NotesViewState extends State<NotesView> {
           )
         ],
       ),
-      body: const Center(child: Text('Just My Notes')),
+      backgroundColor: Colors.grey[300],
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              children: const [
+                Text('Just My Notes'),
+              ],
+            ),
+          ),
+        ),
+      ),
     );
   }
 }

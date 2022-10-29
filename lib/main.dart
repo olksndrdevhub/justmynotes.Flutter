@@ -14,9 +14,6 @@ void main() {
     MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.purple,
-      ),
       home: const HomePage(),
       routes: {
         loginRoute: (context) => const LoginView(),
