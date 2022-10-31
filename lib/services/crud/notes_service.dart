@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:developer';
 
 import 'package:flutter/foundation.dart';
 import 'package:justmynotes/services/crud/crud_exceptions.dart';
@@ -114,7 +115,7 @@ class NotesService {
       throw UserAlreadyExists();
     }
     final userId = await db.insert(userTable, {
-      email: email.toLowerCase(),
+      emailColumn: email.toLowerCase(),
     });
 
     return DatabaseUser(
