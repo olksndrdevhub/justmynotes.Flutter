@@ -36,6 +36,12 @@ class _NotesViewState extends State<NotesView> {
           title: const Text('Just My Notes'),
           leading: const Icon(Icons.note_alt_outlined),
           actions: [
+            IconButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(addNoteRoute);
+              },
+              icon: const Icon(Icons.add_circle_outline),
+            ),
             PopupMenuButton<MenuAction>(
               onSelected: (value) async {
                 switch (value) {
@@ -60,7 +66,7 @@ class _NotesViewState extends State<NotesView> {
                   )
                 ];
               },
-            )
+            ),
           ],
         ),
         backgroundColor: Colors.grey[300],
