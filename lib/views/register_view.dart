@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:justmynotes/constants/routes.dart';
 import 'package:justmynotes/services/auth/auth_exceptions.dart';
 import 'package:justmynotes/services/auth/auth_service.dart';
-import 'package:justmynotes/utilities/show_error_dialog.dart';
+import 'package:justmynotes/utilities/dialogs/error_dialog.dart';
 
 class RegisterView extends StatefulWidget {
   const RegisterView({super.key});
